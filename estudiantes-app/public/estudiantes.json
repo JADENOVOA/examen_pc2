@@ -1,0 +1,7 @@
+[
+  { "id": 1, "nombre": "Ana Torres", "nota1": 18, "nota2": 17, "nota3": 19 },
+  { "id": 2, "nombre": "Luis Pérez", "nota1": 12, "nota2": 14, "nota3": 13 },
+  { "id": 3, "nombre": "María Gómez", "nota1": 10, "nota2": 9, "nota3": 12 },
+  { "id": 4, "nombre": "Carlos Ruiz", "nota1": 15, "nota2": 16, "nota3": 14 },
+  { "id": 5, "nombre": "Sofía Díaz", "nota1": 20, "nota2": 18, "nota3": 17 }
+]

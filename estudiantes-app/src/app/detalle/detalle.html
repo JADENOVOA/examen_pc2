@@ -1,0 +1,41 @@
+<div class="container mt-5" style="max-width: 500px;">
+  @if (resultado) {
+    <div class="card shadow">
+      <div class="card-header bg-primary text-white text-center">
+        <h4 class="mb-0">Detalle de {{ resultado.nombre }}</h4>
+      </div>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between">
+          <strong>Suma de notas</strong>
+          <span>{{ resultado.suma }}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <strong>Promedio</strong>
+          <span>{{ resultado.promedio.toFixed(2) }}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <strong>Estado académico</strong>
+          <span [class]="'badge ' + (resultado.estado === 'Aprobado' ? 'text-bg-success' : 'text-bg-danger')">
+            {{ resultado.estado }}
+          </span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <strong>Observación</strong>
+          <span [class]="'badge ' + (resultado.observacion === 'Excelente' ? 'text-bg-success' : resultado.observacion === 'Regular' ? 'text-bg-warning' : 'text-bg-danger')">
+            {{ resultado.observacion }}
+          </span>
+        </li>
+      </ul>
+
+      <div class="card-footer text-center">
+        <a class="btn btn-secondary" routerLink="/">← Volver</a>
+      </div>
+    </div>
+  } @else {
+    <div class="text-center">
+      <div class="spinner-border text-primary" role="status"></div>
+      <p>Cargando...</p>
+    </div>
+  }
+</div>
